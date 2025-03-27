@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0; box-sizing: border-box;}
+        ul, ol, li {list-style:none; margin:0; padding:0;}
+        a {text-decoration:none;}
+
+        /*경기일정*/
+        #schedule {width:1000px; height:800px; margin:0 auto; border:2px solid gray;}
+        #schedule > h3 {font-size:30px; color:green; text-align:center; line-height:100px; }
+        #schedule > p {font-size:17px; color:#666; text-align:center; line-height:10px; }
+        #schedule > .box {width:200px; height:300px; float:left; margin:20px 24px;}
+        #schedule > .box:hover {box-shadow:5px 5px 5px #e6e5e5;}
+        #schedule > .box > a >img {width:100%; height:200px;}
+        #schedule > .box > h4 > a {font-size:15px; color:#000;}
+        #schedule > .box > p > a {font-size:12px; color:#000;}
+        #schedule > .box >span > a {font-size:12px; color:#666; font-weight:bold;}
+
+
+        /*하이라이트*/
+        #highlight {width:1000px; height:800px; margin:0 auto; border:2px solid gray;}
+        #highlight > h3 {font-size:30px; color:green; text-align:center; line-height:100px; }
+        #highlight > p {font-size:17px; color:#666; text-align:center; line-height:10px; }
+        #highlight > .sbox {width:300px; height:300px; float:left; margin:20px 16px;}
+        #highlight > .sbox:hover {box-shadow:5px 5px 5px #e6e5e5;}
+        #highlight > .sbox > a >img {width:100%; height:200px;}
+        #highlight > .sbox > h4 > a {font-size:15px; color:#000;}
+        #highlight > .sbox > p > a {font-size:12px; color:#000;}
+        #highlight > .sbox >span > a {font-size:12px; color:#666; font-weight:bold;}
+
+    </style>
+
+</head>
+<body>
+    <div id="schedule">
+
+        <h3>도드람 2024-2025 V리그</h3>
+  
+        <p>잔여 경기일정</p>
+  
+        <div class="box">
+          <a href="https://m.sports.naver.com/game/20250327021F257"><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/13/2003_300300.png" alt="홈팀"></a>
+          <h4><a href="https://m.sports.naver.com/game/20250327021F257">정관장 vs 현대건설</a></h4>
+          <p><a href="https://m.sports.naver.com/game/20250327021F257">2025.03.27(목) 19:00</a></p>
+          <span><a href="https://m.sports.naver.com/game/20250327021F257">대전 충무체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250328021M258"><img src="https://t1.daumcdn.net/media/img-section/sports13/logo/team/13/1001_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250328021M258">대한항공 vs KB손해보험</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250328021M258">2025.03.28(금) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250328021M258">인천 계양체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250329021F259"><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/13/2001_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250329021F259">현대건설 vs 정관장</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250329021F259">2025.03.29(토) 14:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250329021F259">수원체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250330021M260"><img src="https://t1.daumcdn.net/media/img-section/sports13/logo/team/13/1004_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250330021M260">KB손해보험 vs 대한항공</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250330021M260">2025.03.30(일) 14:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250330021M260">경민대학교 기념관(체육관)</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250331021F261"><img src="https://t1.daumcdn.net/media/img-section/sports13/logo/team/13/2004_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250331021F261">흥국생명 vs PO승</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250331021F261">2025.03.31(월) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250331021F261">인천 삼산월드체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250401021M262"><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/13/1005_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250401021M262">현대캐피탈 vs PO승</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250401021M262">2025.04.01(화) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250401021M262">천안 유관순체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250402021F263"><img src="https://t1.daumcdn.net/media/img-section/sports13/logo/team/13/2004_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250402021F263">흥국생명 vs PO승</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250402021F263">2025.04.02(수) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250402021F263">인천 삼산월드체육관</a></span>
+        </div>
+
+        <div class="box">
+            <a href="https://m.sports.naver.com/game/20250403021M264"><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/13/1005_300300.png" alt="홈팀"></a>
+            <h4><a href="https://m.sports.naver.com/game/20250403021M264">현대캐피탈 vs PO승</a></h4>
+            <p><a href="https://m.sports.naver.com/game/20250403021M264">2025.04.03(목) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/game/20250403021M264">천안 유관순체육관</a></span>
+        </div>
+    </div>  
+
+    <div id="highlight">
+
+        <h3>지난 경기 하이라이트</h3>
+
+        <p>최신순으로 업데이트 됩니다.</p>
+      
+      
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1302989"><img src="https://imgnews.pstatic.net/image/055/2025/03/26/0001243706_001_20250326222112356.jpg?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1302989">대한항공 vs KB손해보험</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1302989">2025.03.26(수) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1302989">인천 계양체육관</a></span>
+        </div>
+
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1302447"><img src="https://imgnews.pstatic.net/image/468/2025/03/26/0001134779_001_20250326065315163.jpg?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1302447">현대건설 vs 정관장</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1302447">2025.03.25(화) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1302447">수원 체육관</a></span>
+        </div>
+
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1300419"><img src="https://imgnews.pstatic.net/image/018/2025/03/20/0005967210_001_20250320203911786.jpg?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1300419">GS칼텍스 vs 흥국생명</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1300419">2025.03.20(목) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1300419">서울 장충체육관</a></span>
+        </div>
+
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1300413"><img src="https://imgnews.pstatic.net/image/425/2025/03/21/20250321073325071476cf2d78c681245156135_20250321082111406.png?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1300413">현대캐피탈 vs OK저축은행</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1300413">2025.03.20(목) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1300413">천안 유관순체육관</a></span>
+        </div>
+
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1300056"><img src="https://imgnews.pstatic.net/image/425/2025/03/20/20250320081341093406cf2d78c681245156135_20250320081509867.png?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1300056">정관장 vs 한국도로공사</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1300056">2025.03.19(수) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1300056">대전 충무체육관</a></span>
+        </div>
+
+        <div class="sbox">
+            <a href="https://m.sports.naver.com/video/1300060"><img src="https://imgnews.pstatic.net/image/076/2025/03/19/2025031901001273800183861_20250319213322511.jpg?type=w647" alt="하이라이트"></a>
+            <h4><a href="https://m.sports.naver.com/video/1300060">우리카트 vs 삼성화재</a></h4>
+            <p><a href="https://m.sports.naver.com/video/1300060">2025.03.19(수) 19:00</a></p>
+            <span><a href="https://m.sports.naver.com/video/1300060">서울 장충체육관</a></span>
+        </div>
+    </div>
+</body>
+</html>
