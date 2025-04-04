@@ -23,3 +23,4 @@ const ramda3 = num => num*num;
 result = ramda3(8);
 console.log(`합 결과 : ${result}`);
 console.log("----------------------------------")
+
