@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul, ol, li{list-style: none; margin: 0; padding: 0;}
+        
+
+        /* header */
+        header {width: 1185px; height: 160px;
+            background-color: green; margin: 0 auto;}
+
+        /* 로고 */
+        #logo {width: 220px; height: 100px; float: left; margin: 20px 0 0 0px;
+            background-color: red;}
+        #logo > a > img {width: 100%; height: 100%px;} /* height: 100%px 오타인지 아닌지 모르겠음*/
+
+        /* 로그인 */
+        #login {width: 300px; height: 30px; float: right; 
+            margin: 30px 20px 0 0px; background-color: gold;}
+        #login ul > li {float: left; font-size: 11px; color: #666;}
+        #login li a {margin: 0 15px; text-decoration: none; color:#666}
+        
+        /* 네비 */
+        nav {width: 920px; height: 40px; float: left; margin: 20px 0 0 40px;
+            background-color: pink;}
+        nav > ul > li > a {text-decoration:none; font-size: 19px; font-weight: bold; 
+            float: left; margin: 0 30px; color:#000;} 
+        nav > ul > li > a:hover {color:green;}
+
+        #slider {width: 1475px; height: 560px;
+            background-color: purple; margin: 0 auto;}
+        #slider > img {width: 100%; height: 100%;}
+
+        section {width: 1280px; height: 1400px;
+            background-color: skyblue; margin: 0 auto; text-align: center; padding: 10px 0;}
+
+        #today {width: 100%; height: 700px;
+            background-color: yellow; 
+            margin: 30px auto;/* container 영역을 브라우저에서 가운데 정렬하기 위해 auto설정 */          
+            }
+        #today > h3{font-size: 20px; color: green; text-align: center;}
+        #today > p {font-size: 20px; color: #000; text-align: center;}
+        #today >.product {width:250px; height:250px; 
+            background-color: red; margin: 10px;
+            display: inline-block;/* 가로로 나열하기 위해 block레벨 요소를 inline-block레벨로 전환 */
+        }
+
+        #recommend {width: 100%; height: 550px;
+            background-color: tomato; 
+            margin: 30px auto;/* container 영역을 브라우저에서 가운데 정렬하기 위해 auto설정 */          
+            } 
+        #recommend > h3{width: 100%; font-size: 20px; color: red; text-align: center;}
+        #recommend > p {width: 100%; font-size: 20px; color: #000; text-align: center;}
+        #recommend >.product {width:200px; height:200px; 
+            background-color: blue; margin: 10px;
+            display: inline-block;/* 가로로 나열하기 위해 block레벨 요소를 inline-block레벨로 전환 */
+        }
+
+        footer {width: 100%; height: 145px;
+            background-color: lightgray; margin: 10px auto;}
+        footer > #box {width:1240px; height:130px; margin:10px auto;}
+        footer > #box > ul {width:750px; height:50px; float:left; 
+            margin:20px 0 0 40px; color:#666;}
+        footer > #box > ul > li {float:left; font-size: 12px; margin:5px 10px;}
+        footer > #box > ul > li a {text-decoration: none; color:#666;}
+        footer > #box > p { float:left; width:700px; height:50px; line-height:150%; 
+            margin:10px 0 0 40px; font-size:12px; color: #666;}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="#">
+                <img src="https://blog.kakaocdn.net/dn/6ui8u/btqDtzRrCzg/ZM8q87L5frjEl0za6UnIk1/img.jpg" alt="로고">
+            </a>
+        </div>
+
+        <div id="login">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li>|</li>
+                <li><a href="#">회원가입</a></li>
+                <li>|</li>
+                <li><a href="#">Q & A</a></li>
+                <li>|</li>
+                <li><a href="#">LANGUAGE</a></li>
+                <li>|</li>
+            </ul>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">상품</a></li>
+                <li><a href="#">베스트</a></li>
+                <li><a href="#">특가할인</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">REVIEW</a></li>
+                <li><a href="#">쿠폰/혜택</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="slider"><img src="https://image11.coupangcdn.com/image/cmg/oms/banner/a13bdfb9-abe6-4db3-879d-68377709c2ea_1280x423.jpg" alt="슬라이더 이미지"></div>
+
+    <section>
+        <div id="today">
+            <h3>이 상품 어때요?</h3>
+            <p>오늘의 상품입니다.</p>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품1">1</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품2">2</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품3">3</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품4">4</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품5">5</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품6">6</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품7">7</a>
+            </div>
+            <div class="product">
+                <a href="#"><img src="#" alt="상품8">8</a>
+            </div>
+        </div>
+
+        <div id="recommend">
+            <div id="recommend">
+                <h3>지금 뜨고 있는 맞춤 베스트</h3>
+                <p>고객님을 위한 맞춤 Pick</P>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품1">1</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품2">2</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품3">3</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품4">4</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품5">5</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품6">6</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품7">7</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품8">8</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품9">9</a>
+                </div>
+                <div class="product">
+                    <a href="#"><img src="#" alt="상품10">10</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="box">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li>|</li>
+                <li><a href="#">BUSINESS PRACTICE OFFICE</a></li>
+                <li>|</li>
+                <li><a href="#">COPYRIGHT</a></li>
+                <li>|</li>
+                <li><a href="#">CONTACT US</a></li>
+                <li>|</li>
+                <li><a href="#">SITEMAP</a></li>
+                <li>|</li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li>|</li>
+                <li><a href="#"><a href="#">Fiat Chrysler Automobiles (FCA)</a></li>
+                <li>|</li>
+                <li><a href="#">Chrysler</a></li>
+                <li>|</li>
+                <li><a href="#">FIAT®</a></li>
+                <li>|</li>
+            </ul>
+
+            <p>ⓒ 2016 Fiat Chrysler Automobiles (FCA). All Rights Reserved.<br>
+                Chrysler, Jeep 및 FIAT 로고는 Fiat Chrysler Automobiles (FCA)의 등록 상표입니다.</p>
+        </div>
+    </footer>
+</body>
+</html>
