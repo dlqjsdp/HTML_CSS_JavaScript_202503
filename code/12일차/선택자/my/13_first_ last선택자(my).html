@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 선택자 </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js" 
+    integrity="sha512-eH6+OZuv+ndnPTxzVfin+li0PXKxbwi1gWWH2xqmljlTfO3JdBlccZkwWd0ZcWAtDTvsqntx1bbVSkWzHUtfQQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    // menu li:first 부분(내용1)에 노란 배경, menu li:last(내용3) 핑크 배경
+    $(function(){
+        $("#menu li:first").css("background-color","yellow");
+        $("#menu li:last").css("background-color","pink");
+    });
+</script>
+
+</head>
+<body>
+ <h1>탐색 선택자</h1>
+ <ul id="menu">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+ </ul>
+</body>
+</html>

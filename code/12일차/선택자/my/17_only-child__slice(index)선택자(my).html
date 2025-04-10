@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 선택자 </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js" 
+integrity="sha512-eH6+OZuv+ndnPTxzVfin+li0PXKxbwi1gWWH2xqmljlTfO3JdBlccZkwWd0ZcWAtDTvsqntx1bbVSkWzHUtfQQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(function(){
+        $("li:only-child").css("background-color","yellow");
+        //:only-child는 부모 요소 안에 해당 자식이 하나뿐일 때 선택
+        // 내용5 배경 노란색
+        $("#first_list li").slice(2).css("background-color","pink");
+        //#first_list는 첫 번째 ul (내용1~내용4까지)
+        //.slice(2)는 인덱스 2부터의 요소들을 선택 
+        //내용3~내용4 핑크색 배경
+    });
+</script>
+
+</head>
+<body>
+  <h1>탐색 선택자</h1>
+  <ul id="first_list">
+     <li>내용1</li> <!--인덱스0-->
+     <li>내용2</li> <!--인덱스1-->
+     <li>내용3</li> <!--인덱스2-->
+     <li>내용4</li> <!--인덱스3-->
+  </ul>
+  <ul>
+     <li>내용5</li> <!-- 이 li는 부모 ul 안에 혼자 있는 유일한 자식! -->
+  </ul>
+</body>
+</html>

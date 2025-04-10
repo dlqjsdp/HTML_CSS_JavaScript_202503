@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){ //문서가 로드되면 준비 완료
+    $("#flip").click(function(){ //사용자가 #flip 요소(윗부분)를 클릭하면
+      $("#panel").slideToggle("slow");
+      //#panel 요소가 slideToggle("slow")에 의해 아래로 펼쳐지거나, 
+      // 다시 위로 접힘.
+      //이미 열려 있으면 닫히고, 닫혀 있으면 열리는 토글(toggle) 방식
+    });
+  });
+
+/* 실제 동작 예시
+페이지 열면 #panel은 보이지 않음.
+사용자가 Click to slide the panel down or up 클릭.
+Hello world! 메시지가 아래로 슬라이드되며 나타남.
+다시 클릭하면 위로 슬라이드되며 사라짐. */
+
+</script>
+
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none; /* 처음에는 숨김 상태 */
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="flip">Click to slide the panel down or up</div>
+<!-- flip: 사용자에게 클릭을 유도하는 박스 -->
+<div id="panel">Hello world!</div>
+<!-- #panel: 처음에는 숨겨져 있는 박스 (display: none;) -->
+
+</body>
+</html>

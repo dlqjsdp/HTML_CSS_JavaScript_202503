@@ -387,13 +387,18 @@ section.contact .contact-me .right button{
 }
 
 /* 반응형 코드 적용하기 */
-
 /* media - 기준점 설정하기*/
 
 /* 화면 너비가 1140px 이하일 때 */
-@media screen and (max-width: 1140px){}
-/* 화면 너비가 992px 이하일 때 */
+@media screen and (max-width: 1140px){
+    /* 메인 영역 container 기준 너비 변경 */
+    main .container{
+        width: 992px; /* 1140px -> 992px */
+    }
+}
 
+
+/* 화면 너비가 992px 이하일 때 */
 @media screen and (max-width: 992px){
     html{
         font-size: 14px; /*해상도별 기준 font-size 변경*/

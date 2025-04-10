@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+//fadeIn() 메서드를 이용해 요소를 점점 보이게 만드는 애니메이션 효과
+$(document).ready(function(){ //문서가 완전히 로드 된 뒤에 내부 코드가 실행된다.
+  $("button").click(function(){ //버튼을 클릭하면 내부의 동작들이 실행된다
+    $("#div1").fadeIn(); // div1이 기본 속도로 페이드 인
+    $("#div2").fadeIn("slow"); // div2는 느린 속도로 페이드 인
+    $("#div3").fadeIn(3000); // div3은 3초 동안 서서히 나타남
+  });
+});
+</script>
+
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<!--각 박스는 display:none으로 설정되어 있어 처음엔 화면에 보이지 않음-->
+</body>
+</html>

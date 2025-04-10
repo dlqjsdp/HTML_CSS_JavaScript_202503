@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $("p").click(function(){
+      $(this).hide();
+      //this는 이벤트가 발생한 요소, 즉 사용자가 실제로 클릭한 <p>요소를 가리킨다.
+      //.hide()는 해당 요소를 화면에서 사라지게 한다.
+      // 사용자가 클릭하는 <p>요소는 숨겨지고 나머지 요소는 그대로 유지
+    });
+  });
+</script>
+
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+
+    //패널 내려오기
+    $("#flip").click(function(){ //사용자가 #flip 영역을 클릭하면
+      $("#panel").slideDown(5000); // #panel이 5초 동안 천천히 내려온다
+    });
+
+    // 슬라이드 멈추기
+    $("#stop").click(function(){ //내려오는 도중에 #stop 버튼을 클릭하면
+      $("#panel").stop(); // .stop() 메서드가 실행되어 애니메이션이 즉시 중단
+    });
+  });
+  
+</script>
+
+<style>
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none; /* 처음에는 숨김 */
+}
+</style>
+</head>
+<body>
+
+<button id="stop">Stop sliding</button>
+<!-- #stop 버튼: 슬라이드 애니메이션을 중간에 멈춤 -->
+
+<div id="flip">Click to slide down panel</div>
+<!-- #flip: 클릭하면 아래 패널이 슬라이드 다운됨 -->
+<div id="panel">Hello world!</div>
+<!-- #panel: 처음에는 숨겨져 있음 (display: none) -->
+
+</body>
+</html>

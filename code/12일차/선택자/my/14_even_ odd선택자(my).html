@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 선택자 </title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js" 
+    integrity="sha512-eH6+OZuv+ndnPTxzVfin+li0PXKxbwi1gWWH2xqmljlTfO3JdBlccZkwWd0ZcWAtDTvsqntx1bbVSkWzHUtfQQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+//홀수 인덱스는 핑크, 짝수 인덱스는 노란색 배경
+//인덱스는 0부터 시작. 내용1 = 0, 내용2 = 1, 내용3 = 2, 내용4 =3
+//노핑노핑
+    $(function(){
+        $("#menu li:even").css("background-color","yellow");
+        $("#menu li:odd").css("background-color","pink");
+    });
+</script>
+</head>
+<body>
+   <h1>탐색 선택자</h1>
+   <ul id="menu">
+      <li>내용1</li> <!--인덱스0-->
+      <li>내용2</li> <!--인덱스1-->
+      <li>내용3</li> <!--인덱스2-->
+      <li>내용4</li> <!--인덱스3-->
+   </ul>
+</body>
+</html>

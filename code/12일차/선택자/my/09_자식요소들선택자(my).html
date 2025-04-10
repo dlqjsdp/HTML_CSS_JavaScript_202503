@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js" 
+    integrity="sha512-eH6+OZuv+ndnPTxzVfin+li0PXKxbwi1gWWH2xqmljlTfO3JdBlccZkwWd0ZcWAtDTvsqntx1bbVSkWzHUtfQQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+    //선택한 요소들의 모든 자식요소를 선택한다.
+    //body의 모든 자식들을 빨간 테두리 <h1>테두리 하나, <ul>테두리 하나
+        $(function(){
+            $("body").children().css("border","1px solid red");
+        });
+    </script>
+
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul>
+        <li>내용1
+            <ul>
+                <li>내용2</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
