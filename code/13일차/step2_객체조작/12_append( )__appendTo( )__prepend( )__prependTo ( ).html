@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta  charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+// append(), appendTo() : 선택한 요소 내의 마지막 위치에 새 요소를 생성하여 추가함.
+// prepend(), prependTo() : 선택한 요소 내의 앞 위치에 새 요소를 생성하고 추가함.
+$(function(){
+  $("#listZone").append("<li>새 내용 추가2</li>");
+  //id="listZone"인 요소 내의 마지막 위치에 <새 내용 추가2>추가
+  //<>
+  $("<li>새 내용 추가1</li>").prependTo("#listZone");
+  //id="listZone"인 요소 내의 가장 앞 위치에 <새 내용 추가1>추가
+
+  /*$("<li>새 내용 추가2</li>").appendTo("#listZone");
+  $("#listZone").prepend("<li>새 내용 추가1</li>");*/
+});
+
+</script>
+</head>
+<body>
+   <ul id="listZone">
+      <li>내용</li>
+   </ul>
+</body>
+</html>

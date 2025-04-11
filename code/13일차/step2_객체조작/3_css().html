@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<style>
+#menu li{margin:5px 0;} 
+/*
+id="menu"인 요소가 존재하지 않아서 작동하지 않음.
+=> 불필요한 스타일이 들어 있는 상태
+*/
+
+</style>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+  $(function(){ //문서가 완전히 로드 되면 안의 코드가 실행된다.
+    $("p").text( $("h1").css("color") );
+    // h1의 글자 색상(color) 을 가져온다 => "rgb(0, 0, 255)" 또는 "blue" 일 수 있음.
+    // 이 값을 $("p") 요소의 텍스트로 삽입
+    $("h2").css("color","red");
+    //h2 요소의 글자 색상을 "red"로 변경
+  });
+</script>
+</head>
+<body>
+  <h1 style="color:blue">객체 조작 및 생성</h1> <!-- 파란색 글씨 유지 -->
+  <p></p> <!-- <p>rgb(0, 0, 255)</p> -->
+  <h2>CSS 메서드</h2> <!-- 빨간색 글씨로 바뀜 -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+  $(function(){
+    //prop() 메서드를 이용해 HTML 요소의 속성(Property) 을 가져오거나 설정
+    $("#st_1").prop("title","단락 태그");
+    // 1. p 요소에 title 속성 추가
+    // <p id="st_1"> 요소에 title="단락 태그" 속성이 추가됨
+    //→ 마우스를 올리면 툴팁처럼 "단락 태그"가 보일 수도 있음
+
+    $("#txt1").text( $("#st_1").prop("title") );
+    // 2. title 속성 값 읽어서 txt1에 넣기
+    //→ txt1 안에 "단락 태그"라는 텍스트가 표시됨
+
+    $("#txt2").text( $("#st_1").prop("tagName") );
+    // 3. tagName 읽어서 txt2에 넣기
+    //→ tagName 속성은 해당 DOM 요소의 태그 이름을 의미
+    //→ 결과는 P (대문자)
+
+    $("#txt3").text( $("#sel").prop("selectedIndex") );
+    // 4. select 요소의 선택된 index를 txt3에 넣기
+    //→ <select>에서 두 번째 옵션(네이트)이 선택되어 있으므로
+    //→ 인덱스는 1 (0부터 시작)
+  });
+</script>
+</head>
+
+<body>
+  <p id="st_1">내용1</p> <!-- 대상이 되는 단락 -->
+  <p id="txt1"></p> <!-- title 속성 출력 -->
+  <p id="txt2"></p> <!-- tagName 출력 -->
+  <select id="sel"> <!-- 선택된 인덱스 출력 -->
+   <option value="naver">네이버</option>
+   <option value="nate" selected="selected">네이트</option>
+   <option value="daum">다음</option>
+  </select>
+  <p id="txt3"></p>
+</body>
+</html>

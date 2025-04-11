@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script>
+    //offset() 메서드는 문서(document)를 기준으로 선택한 요소의 
+    //가로/세로 떨어진 위치 좌푯값을 반환하거나 변경할 떄 사용
+    
+      $( document ).ready( function() {
+        $('button').click(function(){
+         $( 'h1' ).offset( { left: 100, top: 1250 } );
+         //h1요소가 버튼을 클릭하면 변경된 위치만큼 이동
+        });
+      } );
+    </script>
+
+  </head>
+
+  <body>
+    <button>click</button>
+    <h1>Lorem</h1>
+  </body>
+
+</html>

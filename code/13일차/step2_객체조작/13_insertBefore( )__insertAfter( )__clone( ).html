@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+//insertBefore() : 선택한 요소 이전 위치에 새 요소를 생성하여 추가
+//insertAfter() : 선택한 요소 다음 위치에 새 요소를 생성하여 추가
+//clone() : 선택한 요소를 복제
+
+$(function(){
+  $("<li>새 내용 추가1</li>").insertBefore("#myList");
+  // id="myList"인 요소의 이전 위치에 새 요소르 추가
+  var copy_obj=$("#myList").clone();
+  // id="myList"인 요소를 복제하여 변수 copy_obj에 할당
+  $(copy_obj).insertAfter("#myList");
+  // id="myList"인 요소의 다음 위치에 앞서 복제한 요소를 추가
+  // <내용> 아래에 복제한 요소인 <내용> 추가
+});
+</script>
+</head>
+<body>
+<ul>
+  <li id="myList">내용</li>
+</ul>
+</body>
+</html>

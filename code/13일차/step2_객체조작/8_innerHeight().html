@@ -1,0 +1,49 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+ $(function(){
+   var w1=$("#box1").width();
+   // id="box1"인 요소에 순수 width 속성값을 가져와 변수 w1에 할당
+   $("#t1").text("너비: "+w1);
+   // 변수 wd1에 저장된 너빗값을 id="t1"인 요소에 텍스트로 출력 
+   // -> 너비: 200 출력
+
+   var w2=$("#box1").innerWidth();
+   // id="box1"인 요소에 패딩값을 포함한 너빗값을 변수 w2에 할당
+   $("#t2").text("너비: "+w2);
+   // 변수 wd2에 저장된 너빗값을 id="t2"인 요소에 텍스트로 출력 
+   // -> 너비: 210 출력
+
+   var w3=$("#box1").outerWidth();
+   // id="box1"인 요소에 패딩과 보더값을 포함한 너빗값을 변수 w3에 할당
+   $("#t3").text("너비: "+w3);
+   // 변수 wd3에 저장된 너빗값을 id="t3"인 요소에 텍스트로 출력 
+   // -> 너비: 230 출력
+
+   $("#box2").width("200").height("50")
+   //id="box2"인 요소의 너비를 200px로, 높이를 50px로 변경
+   .css("border","3px solid blue");
+   //3px의 파란색 선을 생성
+ });
+</script>
+
+<style type="text/css">
+   *{margin:0;padding:0;}
+   body{margin:20px;}
+   #box1{width:200px;height:100px;padding:5px;
+   border:10px solid red;margin:10px;}
+</style>
+
+</head>
+<body>
+ <p id="box1">박스1</p>
+ <p id="t1"></p>
+ <p id="t2"></p>
+ <p id="t3"></p>
+ <p id="box2">박스2</p>
+</body>
+</html>

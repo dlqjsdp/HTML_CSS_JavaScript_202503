@@ -1,0 +1,25 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta charset="utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script>
+// before() : 선택한 요소의 이전 위치에 새 요소를 생성
+// after() : 선택한 요소의 다음 위치에 새 요소를 생성
+ $(function(){
+   $("#myList").before("<li>새 내용 추가1</li>");
+   // id="myList"인 요소의 이전 위치에 새 요소를 생성
+   // -> <내용> 위에 <새 내용을 추가2> 표시
+   $("#myList").after("<li>새내용 추가2</li>");
+   // id="myList"인 요소의 다음 위치에 새 요소를 생성
+   // -> <내용> 아래에 <새 내용을 추가2> 표시
+ });
+</script>
+</head>
+<body>
+   <ul>
+      <li id="myList">내용</li>
+   </ul>
+</body>
+</html>
