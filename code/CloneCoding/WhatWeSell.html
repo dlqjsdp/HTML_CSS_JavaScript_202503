@@ -4,27 +4,457 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
+
     <style>
+        * {margin:0; box-sizing:border-box;}
+        ul, ol, li {list-style:none; margin:0; padding:0;}
+        a {text-decoration: none; color: #000;}
 
-        header {width: 1765px; height: 210px; margin: 0 auto;
-        background-color: lightpink;}
+        /* header */
+        header {width: 1765px; height: 210px; margin: 0 auto;}
         
-        #slider {width: 100%; height: 595px; margin: 0 auto;
-        background-color: lightyellow;}
+        /* 관심상품 */
+        #interest {width:160px; height:30px; float:left; margin:20px 30px 0 0px;}
+        #interest > ul > li > a {font-size:11px; color:#666; float:left; 
+            margin:7px 5px;}
+        
+        /* 로그인 */
+        #login {width:310px; height:30px; float:right; margin:20px 0;}
+        #login > ul {font-size:11px; color:#666;}
+        #login > ul> li {float:left; margin:7px 4px;}
 
-        section {width: 1270px; height: 3600px; margin: 0 auto;
-        background-color: lightskyblue;}
+        /* 로고 */
+        #logo {width: 210px; height: 60px; float: left; margin: 65px 0 0 585px;}
+        #logo > img {width:100%; height:100%;}
 
-        footer {width:100%; height:590px; margin: 0 auto; 
-            background-color:lightgray;}
+        /* 네비 */
+        nav {width: 1150px; height: 50px; float:left; margin: 20px 0 0 330px;}
+        nav > ul {font-size: 14px;}
+        nav > ul > li {float: left; margin: 15px 25px 0 20px;}
+
+        /* 아이콘 */
+        #icon {width:150px; height:40px; float:right; margin:30px 0 0 0;}
+        #icon > .iconbox > img {width:30px; height:30px; float:left; margin:0 10px 0;}
+        
+
+        /* slider */
+        #slider {width: 100%; height: 595px; margin: 0 auto;}
+        #slider > img {width:100%; height:595px;}
+
+        /* 메인 */
+        section {width: 1270px; height: 3600px; margin: 0 auto;}
+
+        /* Best상품 */
+        #best {width:1270px; height:1150px;  margin:0 auto; display: flex; 
+            flex-wrap: wrap; justify-content: center; align-content: center;}
+        #best > h3 {width: 100%; font-size:23px; color:#000; 
+            text-align:center; line-height:20px; letter-spacing:2px;}
+        #best > p {width: 100%; font-size:17x; color:#666; 
+            text-align:center; line-height:50px; margin:0 0 8px 0;}
+        #best > ul {width: 100%; font-size:16px; color:#000; 
+            text-align:center; line-height:50px; margin:0 0 25px 0; 
+            display:flex; justify-content:center; flex-wrap:wrap; 
+            align-content:center;}
+        #best > ul > li {float:left; margin:0 20px 0;}
+
+        /* Best 상품 박스 8개 */
+        #best > .box {width:300px; height:400px; margin:0 8px 60px;}
+        #best > .box > img {width:100%; height:280px; margin:0 0 10px 0;}
+        #best > .box > h4 {width:280px; font-size: 13px; margin:0 0 10px 0; float: left;}
+        #best > .box > h5 {width:280px; font-size: 12px; margin:0 0 10px 0; float: left;}
+        #best > .box > span {width:280px; font-size: 13px; float: left;}
+
+        /* only 온라인 상품 */
+        #only {width:1270px; height:700px;  margin:0 auto; display: flex; 
+            flex-wrap: wrap; justify-content: center; align-content: center;}
+        #only > h3 {width: 100%; font-size:23px; color:#000; 
+            text-align:center; line-height:20px; letter-spacing:2px;}
+        #only > p {width: 100%; font-size:16px; color:#666; 
+            text-align:center; line-height:50px; margin:0 0 25px 0;}
+
+        /* only 온라인 박스 8개 */
+        #only > .obox {width:230px; height:400px; float:left; 
+            margin:0 10px 60px;}
+        #only > .obox > img {width:100%; height:230px; margin:0 0 10px 0;}
+        #only > .obox > h4 {width:170px; font-size: 13px; 
+            margin:0 0 10px 0; float: left;}
+        #only > .obox > h5 {width:170px; font-size: 12px; 
+            margin:0 0 10px 0; float: left;}
+        #only > .obox > span {width:170px; font-size: 13px; float: left;}
+
+        /* 신상품 */
+        #new {width:1270px; height:1150px;  margin:0 auto; display: flex; 
+            flex-wrap: wrap; justify-content: center; align-content: center;}
+        #new > h3 {width: 100%; font-size:23px; color:#000; text-align:center; 
+            line-height:20px; letter-spacing:2px;}
+        #new > p {width: 100%; font-size:17x; color:#666; text-align:center; 
+            line-height:50px; margin:0 0 20px 0;}
+            
+        /* 신상품 박스 8개 */
+        #new > .nbox {width:300px; height:400px; margin:0 8px 60px;}
+        #new > .nbox > img {width:100%; height:280px; margin:0 0 10px 0;}
+        #new > .nbox > h4 {width:280px; font-size: 13px; margin:0 0 10px 0; float: left;}
+        #new > .nbox > h5 {width:280px; font-size: 12px; margin:0 0 10px 0; float: left;}
+        #new > .nbox > span {width:280px; font-size: 13px; float: left;}
+        
+        /* 이벤트 박스 */
+        #event {background-color:#eee; width:1230px; height:400px; margin:40px 0 0 0; 
+            display: flex; flex-wrap: wrap; justify-content: center; align-content: center;}
+        #event > h3 {width: 100%; font-size:23px; color:#000; text-align:center; 
+            line-height:60px; letter-spacing:2px; margin:0 0 10px 0;}
+        #event > p {width: 100%; font-size:17x; color:#666; text-align:center; 
+            margin:0 0 30px 0;}
+        #event > span {width:280px; font-size: 13px; text-align:center;}
+        
+
+        /* footer */
+        footer {width:100%; height:590px; margin:0 auto; 
+            background-color:#eee;}
+
+        /* footer 박스 */
+        #fbox {width:1765px; height: 360px; float:left; margin:90px 70px 0;}
+
+        /* footer 로고 */
+        #fibox {width:800px; height:320px; float:left; margin:10px 0 0 0;}
+        #fibox > img {width:175px; height:40px; float:left; margin:0 0 0 10px;}
+
+        /* 회사소개 */
+        #fibox > ul {width:800px; height:55px; float:left; margin: 45px 0 0 0;}
+        #fibox > ul {font-size:13px; color:#000; text-align:center;}
+        #fibox > ul > li {float:left; margin:0 8px 0;}
+
+        /* 쇼핑몰 기본정보 */
+        #fibox > h3 {width: 100%; float: left; font-size:13px; color:#000; 
+            line-height:25px; margin:0 0 15px 8px;}
+        #fibox > p {width: 100%; float: left; font-size:11px; color:#000; 
+            line-height:23px; margin:0 8px 0;}
+
+        /* 고객 센터 정보 */
+        #fpabox {width:180px; height:100px; float:right; margin:100px 10px 0 0;}
+        #fpabox > h3 {font-size:13px; color:#000; line-height:25px; margin:0 0 15px 0;}
+        #fpabox > p {font-size:12px; color:#000; line-height:25px; margin:0;}
+
+        /* 결제 정보 */
+        #fpbox {width:200px; height:200px; float:right; margin:100px 80px 0 0;}
+        #fpbox > h3 {font-size:13px; color:#000; line-height:25px; margin:0 0 15px 0;}
+        #fpbox > p {font-size:12px; color:#000; line-height:25px; margin:0;}
+
+        /* 저작권 */
+        #copybox {width:1765px; height:140px; float:left; border-top:1px solid #666; 
+            margin:0 70px 0;}
+        #copybox > p {float:left; width:400px; height:120px; display:flex; flex-wrap:wrap; 
+            align-content:center; font-size:12px; margin: 0 5px; color: #666;}
+
+        /* sns */
+        #copybox > ul {width:390px; height:40px; float:right; margin:25px 0 0 0;}
+        #copybox > ul > li {font-size:14px; color:#000; line-height:25px; margin:0; 
+            float: left;}
+        #copybox > ul > li > img {width:28px; height:28px; float:left; margin:0 15px 0;}
 
     </style>
+    
 </head>
 <body>
-    <header></header>
-    <div id="slider"></div>
-    <section></section>
-    <footer></footer>
+    <header>
+        <!-- 관심상품 -->
+        <div id="interest">
+            <ul>
+                <li><a href="#">관심상품 0개</a></li>
+                <li><a href="#">좋아요 0개</a></li>
+            </ul>
+        </div>
+
+        <!-- 로고 -->
+        <div id="logo">
+            <img src="https://hyejin06.github.io/20250123/img/logo1.jpg" alt="logo1">
+        </div>
+
+        <!-- 로그인 -->
+        <div id="login">
+            <ul>
+                <li>회원가입</li>
+                <li>|</li>
+                <li>로그인</li>
+                <li>|</li>
+                <li>주문조회</li>
+                <li>|</li>
+                <li>최근본상품</li>
+                <li>|</li>
+                <li>고객센터</li>
+            </ul>
+        </div>
+
+        <!-- 네비 -->
+        <nav>
+            <ul>
+                <li>전체상품</li>
+                <li>BEST</li>
+                <li>크리스마스 소품</li>
+                <li>전통소품</li>
+                <li>모형, 촬영소품</li>
+                <li>빈티지 엔틱 소품</li>
+                <li>계절별 인테리어 소품</li>
+                <li>정원, 테라스</li>
+                <li>조화, 화병</li>
+            </ul>
+        </nav>
+
+        <!-- 아이콘 -->
+        <div id="icon">
+            <div class="iconbox">
+                <img src="https://hyejin06.github.io/20250123/img/icon1.webp" alt="icon1">
+            </div>
+
+            <div class="iconbox">
+                <img src="https://hyejin06.github.io/20250123/img/icon2.webp" alt="icon2">
+            </div>
+
+            <div class="iconbox">
+                <img src="https://hyejin06.github.io/20250123/img/icon3.webp" alt="icon3">
+            </div>
+        </div>
+    </header>
+
+    <div id="slider">
+        <img src="https://hyejin06.github.io/20250123/img/slider1.jpg" alt="slider">
+    </div>
+
+    <br> <br> <br> <br> <br>
+
+    <!-- 메인 -->
+    <section>
+        <!-- Best 상품 -->
+        <div id="best">
+            <h3>BEST! SELLER</h3>
+            <p>베스트 셀러를 만나보세요</p>
+            <br>
+            <ul>
+                <li>베스트셀러</li>
+                <li>새로운 카테고리</li>
+                <li>새로운 카테고리</li>
+                <li>새로운 카테고리</li>
+            </ul>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img1.jpg" alt="img1">
+                <h4>모조 고기 육류 모형 삼겹살 스테이크 목살 돼지고기 소고기 닭고기</h4>
+                <h5>신선한 고기 모형을 그대로 제작</h5>
+                <span>3,000원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img2.jpg" alt="img2">
+                <h4>디저트 모형 과일 케이크 컵케이크 마카롱 슈크림 수플레 타르트</h4>
+                <h5>달콤한 디저트 모형을 그대로 생생하게</h5>
+                <span>8,000원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img3.jpg" alt="img3">
+                <h4>빵 모형 디저트 빵집 베이커리 인테리어 소품</h4>
+                <h5>향긋한 냄새를 풍기는 빵모형 시리즈</h5>
+                <span>2,500원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img4.jpg" alt="img4">
+                <h4>과일 모형 모음 가짜 모조 장식 주방 인테리어 소품 사과 딸기 배 수박 참외 귤 레몬 포도 망고 감 바나나</h4>
+                <h5>세상 모든 과일 모형을 한번에</h5>
+                <span>1,000원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img5.jpg" alt="img5">
+                <h4>딸기 스펀지 케이크 모형 레드 핑크 디저트 빵 촬영 소품</h4>
+                <h5></h5>
+                <span>11,900원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img6.jpg" alt="img6">
+                <h4>사각 미니 과일 케이크 모형</h4>
+                <h5></h5>
+                <span>5,900원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img7.jpg" alt="img7">
+                <h4>가든 오목입구 양동이</h4>
+                <h5></h5>
+                <span>32,000원</span>
+            </div>
+
+            <div class="box">
+                <img src="https://hyejin06.github.io/20250123/img/img8.jpg" alt="img8">
+                <h4>화이트 가든 양동이</h4>
+                <h5></h5>
+                <span>46,000원</span>
+            </div>
+        </div> <!-- <div id="best"> -->
+
+        <!-- Only 온라인 상품 -->
+        <div id="only">
+            <h3>ONLY! ON</h3>
+            <p>오직 온라인에서만 만나보세요</p>
+
+            <div class="obox">
+                <img src="https://hyejin06.github.io/20250123/img/img9.jpg" alt="img9">
+                <h4>원형 개다리 소반</h4>
+                <h5></h5>
+                <span>21,500원</span>
+            </div>
+
+            <div class="obox">
+                <img src="https://hyejin06.github.io/20250123/img/img10.jpg" alt="img10">
+                <h4>팔각 창살 한옥문</h4>
+                <h5></h5>
+                <span>26,000원</span>
+            </div>
+
+            <div class="obox">
+                <img src="https://hyejin06.github.io/20250123/img/img11.jpg" alt="img11">
+                <h4>소형 한옥문</h4>
+                <h5></h5>
+                <span>6,000원</span>
+            </div>
+
+            <div class="obox">
+                <img src="https://hyejin06.github.io/20250123/img/img12.jpg" alt="img12">
+                <h4>전통 한옥 창문 창살 문살 창호지문 6가지사이즈 모음전</h4>
+                <h5>대한민국 전통 한옥스타일로 제작된 창호문</h5>
+                <span>12,000원</span>
+            </div>
+
+            <div class="obox">
+                <img src="https://hyejin06.github.io/20250123/img/img13.jpg" alt="img13">
+                <h4>전통 팔각 창문 문창살 창호지문 한옥문 벽장식</h4>
+                <h5></h5>
+                <span>11,900원</span>
+            </div>
+        </div> <!-- <div id="only"> -->
+
+        <!-- 신상품 -->
+        <div id="new">
+            <h3>NEW! ARRIVALS</h3>
+            <p>언제나 새로운 신상품</p>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img14.jpg" alt="img14">
+                <h4>부활절 병아리, 닭 소품</h4>
+                <span>3,000원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img15.jpg" alt="img15">
+                <h4>부활절 달걀 모형</h4>
+                <span>3,000원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img16.jpg" alt="img16">
+                <h4>통나무 원목 화단 울타리 펜스 휀스 정원 텃밭 꽃밭 인테리어 꾸미기</h4>
+                <span>12,900원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img17.jpg" alt="img17">
+                <h4>복을 쓸어담는 빗자루 모형</h4>
+                <span>2,200원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img18.jpg" alt="img18">
+                <h4>닭 수탉 시골장닭</h4>
+                <span>24,000원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img19.jpg" alt="img19">
+                <h4>미니옹기 항아리 장독대</h4>
+                <span>4,000원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img20.jpg" alt="img20">
+                <h4>전통 대나무 소쿠리 바구니 채반 원형 과일</h4>
+                <span>4,000원</span>
+            </div>
+
+            <div class="nbox">
+                <img src="https://hyejin06.github.io/20250123/img/img21.jpg" alt="img21">
+                <h4>풍수 전통 소품 액막이 명태</h4>
+                <span>9,000원</span>
+            </div>
+        </div> <!-- <div id="new"> -->
+
+
+        <!-- 이벤트 -->
+        <div id="event">
+            <h3>WHAT WESELL HOT EVENT</h3>
+            <p>what wesell 에서 지금 진행중인<br>
+                특별 이벤트를 만나보세요.</p>
+            <span>자세히 보기</span>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div id="fbox">
+            <div id="fibox">
+                <img src="https://hyejin06.github.io/20250123/img/logo2.gif" alt="logo2">
+
+                <ul>
+                    <li>회사소개</li>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>이용안내</li>
+                </ul>
+
+                <h3>쇼핑몰 기본정보</h3>
+                <p><b>상호명</b> 위셀(wesell)
+                    <b>대표자명</b> 최대웅, 윤미래<br>
+                    <b>사업장 주소</b> 10044 경기 김포시 대곶면 대명항로117번길 110-75 1층
+                    <b>대표 전화</b> 07088662222<br>
+                    <b>사업자 등록번호</b> 191-09-01725
+                    <b>통신판매업 신고번호</b> 2022-경기김포-3150 [사업자정보확인]<br>
+                    <b>개인정보보호책임자</b> 최대웅
+                </p>
+            </div>
+
+            <div id="fpabox">
+                <h3>결제정보</h3>
+                <p><b>무통장 계좌정보</b><br>
+                    은행 0000-000-00000 예금주</p>
+            </div>
+
+            <div id="fpbox">
+                <h3>고객센터 정보</h3>
+                <p><b>상담/주문 전화</b> 010-4406-7766<br>
+                    <b>상담/주문 이메일</b><br>
+                    cdw1022@naver.com<br>
+                    <b>CS운영시간</b><br>
+                    MON-FRI AM 10:00 ~ PM 05:00<br>
+                    SAT/SUN/HOLIDAY OFF
+                </p>
+            </div>
+
+        </div>
+
+        <div id="copybox">
+            <p>Copyright © 왓위셀. All Rights Reserved. Hosting by Cafe24 Corp.</p>
+
+            <ul>
+                <li>SNS</li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns1.webp" alt="sicon1"></li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns2.webp" alt="sicon2"></li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns3.webp" alt="sicon3"></li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns4.webp" alt="sicon4"></li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns5.webp" alt="sicon5"></li>
+                <li><img src="https://hyejin06.github.io/20250123/img/sns6.webp" alt="sicon6"></li>
+
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){
+            $('.gnb > li').mouseover(function(){
+                $('.sub').stop().fadeOut();
+                $(this).children('.sub').stop().fadeIn();
+            }).mouseout(function(){
+                $('.sub').stop().fadeOut();
+            });
+
+            function slideshow(){
+                $('.slide').animate({marginLeft:-800}, 800, function(){
+                    $('.slide li:first').appendTo('.slide');
+                    $('.slide').css('margin-left',0)
+                })
+            }
+            setInterval(slideshow, 3000);
+
+            $('table tr:first').mouseover(function(){
+                    $(this).css('text-decoration','underline');
+                }).click(function(){
+                    $('.modalWrap').stop().fadeIn();;
+                });
+            $('.close').click(function(){
+                $('.modalWrap').fadeOut();
+            });
+
+        }); 
+
+    </script>
+
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo"><a href="#"><img src="http://127.0.0.1:5500/14%EC%9D%BC%EC%B0%A8/%EC%9B%B9%EB%94%94%EC%9E%90%EC%9D%B8%20%EA%B8%B0%EB%8A%A5%EC%82%AC%20%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C%201/img/logo.png" alt="logo image"></a></h1>
+            <ul class="gnb">
+                <li><a href="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="#">Festival소개</a></li>
+                        <li><a href="#">행사장 안내</a></li>
+                        <li> <a href="#">조직위원회</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">예약안내</a>
+                    <ul class="sub">
+                        <li><a href="#">예약하기</a></li>
+                        <li> <a href="#">예약확인/취소</a></li>
+                        <li> <a href="#">단체예약문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">아티스트</a>
+                    <ul class="sub">
+                        <li><a href="#">고릴라즈</a></li>
+                        <li><a href="#">메이저 레이저</a></li>
+                        <li><a href="#">아우스게인</a></li>
+                        <li><a href="#">타임로드</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul class="sub">
+                        <li> <a href="#">공지사항</a></li>
+                        <li> <a href="#">사진갤러리</a></li>
+                        <li> <a href="#">영상갤러리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <div class="container">
+            <div class="slideWrap">
+                <ul class="slide">
+
+                </ul>
+            </div> <!--<div class="slideWrap">-->
+        </div><!--<div class="container">-->
+
+        <div class="contentsWrap">
+            <article class="content notice">
+
+                <div class="modalWrap"></div>
+            </article>
+
+            <article class="content gallery">
+
+            </article>
+
+            <article class="content shortcut">
+
+            </article>
+        </div> <!--<div class="contentsWrap">-->
+
+
+        <footer>
+
+        </footer>
+
+    </div> <!--<div id="wrap">-->
+</body>
+</html>
